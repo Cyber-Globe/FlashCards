@@ -4,7 +4,7 @@ export default function FlashCards() {
   const [selectedId, setSelectedId] = React.useState(null);
 
   function handleClick(id) {
-    setSelectedId(!id === selectedId ? id : null);
+    setSelectedId(!id === selectedId ? null : id);
   }
 
   return (
