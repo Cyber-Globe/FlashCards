@@ -1,12 +1,17 @@
 import React from "react";
 import questions from "./flash.js";
 export default function FlashCards() {
-  const [selectedId, setSelectedId] = React.useState(3457);
+  const [selectedId, setSelectedId] = React.useState(null);
+
+  function handleClick(id) {
+    setSelectedId(!id === selectedId ? id : null);
+  }
 
   return (
     <div className="flashcards">
       {questions.map((question) => (
         <div
+          onClick={() => handleClick(question.id)}
           key={question.id}
           className={question.id === selectedId ? "selected" : ""}
         >
