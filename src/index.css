@@ -1,3 +1,23 @@
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.69)),
+    url("/public/images.jpg"); /* public folder path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+  text-align: center;
+  color: #d6d6d6ff;
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .flashcards {
   display: flex;
   flex-wrap: wrap;
@@ -16,6 +36,16 @@
   cursor: pointer;
   background: #e94a4a9d; /* semi-transparent red */
   border: 2px solid transparent;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  user-select: none; /* prevent text selection */
+}
+
+.flashcards div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #ffb0b0ff; /* solid red on hover */
+  color: #ff3030ff;
 }
 
 .flashcards div.selected {
